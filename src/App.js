@@ -23,9 +23,16 @@ function App() {
 
   useEffect(()=>{
     if(result.winner!="none"){
-    alert(`Game finished winning player:${result.winner}`)
-    restart();
+      if(result.winner!="no one"){
+        alert(`Game finished winning player:${result.winner}`)
+      
+        restart();
+      }
+      else{
+        alert(`Game tied`); 
+      }
     }
+    
   },[result])
 
 
@@ -50,7 +57,7 @@ function App() {
   const chooseSquare=(square)=>{
       setBoard(
         board.map((value,index)=>{
-          if(index===square && value=="")
+          if(index===square && value==="")
           {
               return player;
           }

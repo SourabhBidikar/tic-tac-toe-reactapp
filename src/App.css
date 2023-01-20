@@ -40,7 +40,7 @@ body{
 
 
 .square:active{
-  color: grey;
+  background-color: grey;
 }
 
 h4{
